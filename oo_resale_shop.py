@@ -54,4 +54,7 @@ class ResaleShop:
     Returns a computer object given its ID
     """
     def getComputer(self, itemID:int):
-        return self.getInventory()[itemID]
+        if itemID in self.getInventory():
+            return self.getInventory()[itemID]
+        else:
+            print("Computer ID not found. Please select another computer ID.")
